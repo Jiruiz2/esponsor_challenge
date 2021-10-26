@@ -16,6 +16,7 @@ class UserController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'username' => 'required|unique:users',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:8',
         ]);
@@ -24,6 +25,6 @@ class UserController extends Controller
 
         UserService::createUser($data);
 
-        return redirect('')->withSuccess('You have signed-in');
+        return redirect('login');
     }
 }
