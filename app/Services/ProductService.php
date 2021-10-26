@@ -21,6 +21,8 @@ class ProductService
 
     public function buyableProducts() 
     {
-        return Product::where('user_id', '!=', Auth::user()->id)->get();
+        return Product::where('user_id', '!=', Auth::user()->id)
+            ->where('stock', '>', 0)
+            ->get();
     }
 }
