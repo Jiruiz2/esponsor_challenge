@@ -31,7 +31,7 @@
                                 </div>
 
                                 <div class="d-grid mx-auto">
-                                    <button type="submit" class="btn btn-dark btn-block">Comprar</button>
+                                    <button type="submit" class="btn btn-dark btn-block">Buy</button>
                                 </div>
                             </form>
                         </td>
