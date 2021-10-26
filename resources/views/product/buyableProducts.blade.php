@@ -25,18 +25,6 @@
                         <td> {{$product->price}} </td>
                         <td> {{$product->stock}} </td>
                         <td> {{$product->user_id}} </td>
-                        <td>
-                            <form action="{{ route('createTransaction') }}" method="POST">
-                                @csrf
-                                <div class="form-group mb-3">
-                                    <input type="hidden" id="product_id" name="product_id" value="{{$product->id}}">
-                                </div>
-
-                                <div class="d-grid mx-auto">
-                                    <button type="submit" class="btn btn-dark btn-block">Comprar</button>
-                                </div>
-                            </form>
-                        </td>
                     </tr>
                 @endforeach
             </tbody>
