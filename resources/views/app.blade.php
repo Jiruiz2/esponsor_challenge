@@ -34,9 +34,6 @@
                         <a class="nav-link" href="{{ route('transactions') }}">Transactions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('transactions') }}">Transactions</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                     </li>
                     @endguest
