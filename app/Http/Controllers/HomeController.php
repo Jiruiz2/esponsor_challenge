@@ -9,9 +9,9 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            return redirect('');
+            return view('home.index');
         }
 
-        return redirect('login')->withSuccess('You are not allowed to access');
+        return redirect('login');
     }
 }

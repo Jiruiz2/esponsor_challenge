@@ -11,9 +11,9 @@
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group mb-3">
-                                <input type="text" placeholder="Email or username" id="email_or_username" class="form-control" name="email_or_username" required autofocus>
-                                @if ($errors->has('email_or_username'))
-                                <span class="text-danger">{{ $errors->first('email_or_username') }}</span>
+                                <input type="text" placeholder="Email" id="email" class="form-control" name="email" required autofocus>
+                                @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
                                 @endif
                             </div>
 
@@ -24,16 +24,8 @@
                                 @endif
                             </div>
 
-                            <div class="form-group mb-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-
                             <div class="d-grid mx-auto">
-                                <button type="submit" class="btn btn-dark btn-block">Signin</button>
+                                <button type="submit" class="btn btn-dark btn-block">Sign In</button>
                             </div>
                         </form>
 
