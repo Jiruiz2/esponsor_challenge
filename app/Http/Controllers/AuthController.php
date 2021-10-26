@@ -18,11 +18,11 @@ class AuthController extends Controller
     public function createSession(Request $request)
     {
         $request->validate([
-            'email' => 'required',
+            'email_or_username' => 'required',
             'password' => 'required',
         ]);
 
-        $data = $request->only('email', 'password');
+        $data = $request->only('email_or_username', 'password');
 
         if (AuthService::validLogin($data)) {
             return redirect('');

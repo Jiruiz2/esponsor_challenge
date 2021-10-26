@@ -7,13 +7,16 @@
             <div class="col-md-4">
                 <div class="card">
                     <h3 class="card-header text-center">Login</h3>
+                    @if (Session::get('formErrors'))
+                        <span class="text-danger">{{ Session::get('formErrors') }}</span>
+                    @endif
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group mb-3">
-                                <input type="text" placeholder="Email" id="email" class="form-control" name="email" required autofocus>
-                                @if ($errors->has('email'))
-                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                                <input type="text" placeholder="Email or username" id="email_or_username" class="form-control" name="email_or_username" required autofocus>
+                                @if ($errors->has('email_or_username'))
+                                <span class="text-danger">{{ $errors->first('email_or_username') }}</span>
                                 @endif
                             </div>
 
