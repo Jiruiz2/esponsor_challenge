@@ -20,11 +20,6 @@ class ProductController extends Controller
         return view('product.list', ['products' => Auth::user()->products()->get()]);
     }
 
-    public function new()
-    {
-        return view('product.create');
-    }
-
 
     public function create(Request $request)
     {

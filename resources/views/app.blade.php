@@ -25,13 +25,10 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('products') }}">Productos</a>
+                        <a class="nav-link" href="{{ route('products') }}">Buy products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('myProducts') }}">Mis productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('newProduct') }}">Crear producto</a>
+                        <a class="nav-link" href="{{ route('myProducts') }}">My products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('transactions') }}">Transactions</a>
