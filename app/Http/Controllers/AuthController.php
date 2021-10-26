@@ -28,7 +28,7 @@ class AuthController extends Controller
             return redirect('');
         }
 
-        return redirect('login');
+        return redirect('login')->with('formErrors', 'Invalid credentials');
     }
 
     public function logOut()

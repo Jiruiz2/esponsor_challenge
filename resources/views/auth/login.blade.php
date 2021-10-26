@@ -7,6 +7,9 @@
             <div class="col-md-4">
                 <div class="card">
                     <h3 class="card-header text-center">Login</h3>
+                    @if (Session::get('formErrors'))
+                        <span class="text-danger">{{ Session::get('formErrors') }}</span>
+                    @endif
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
