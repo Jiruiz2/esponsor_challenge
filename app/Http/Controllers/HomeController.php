@@ -12,6 +12,6 @@ class HomeController extends Controller
             return redirect('products');
         }
 
-        return redirect('login')->withSuccess('You are not allowed to access');
+        return redirect('login');
     }
 }

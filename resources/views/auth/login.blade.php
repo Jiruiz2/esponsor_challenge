@@ -7,6 +7,9 @@
             <div class="col-md-4">
                 <div class="card">
                     <h3 class="card-header text-center">Login</h3>
+                    @if (Session::get('formErrors'))
+                        <span class="text-danger">{{ Session::get('formErrors') }}</span>
+                    @endif
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
@@ -24,16 +27,8 @@
                                 @endif
                             </div>
 
-                            <div class="form-group mb-3">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-
                             <div class="d-grid mx-auto">
-                                <button type="submit" class="btn btn-dark btn-block">Signin</button>
+                                <button type="submit" class="btn btn-dark btn-block">Sign In</button>
                             </div>
                         </form>
 
